@@ -3,7 +3,7 @@
 		Keith D. Donaldson
 */
 		// Get Homeboyzradio Stream
-		var hbraudio = new Audio('http://icecast.ksl.com:8000/');
+		var hbraudio = new Media('http://icecast.ksl.com:8000/');
 		//var hbraudio = new Audio('http://s8.voscast.com:7438/');
 		hbraudio.id = 'playerMyAudio';
 			
