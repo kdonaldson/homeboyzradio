@@ -2,9 +2,34 @@
 		K. DONALDSON LLC
 		Keith D. Donaldson
 */
+        // Wait for PhoneGap to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap is ready
+        //
+        function onDeviceReady() {
+            //playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+			// Get Homeboyzradio Stream
+			var hbraudio = new Media('http://icecast.ksl.com:8000/', onSuccess, onError);
+        }
+		
 		// Get Homeboyzradio Stream
-		var hbraudio = new Media('http://icecast.ksl.com:8000/');
+		//var hbraudio = new Media('http://icecast.ksl.com:8000/', onSuccess, onError);
 		//var hbraudio = new Audio('http://s8.voscast.com:7438/');
+		
+		 // onSuccess Callback
+        function onSuccess() {
+            hbraudio.release();
+            console.log("playAudio():Audio Success");
+        }
+
+		// onError Callback 
+        function onError(error) {
+            console.log('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+		
 		hbraudio.id = 'playerMyAudio';
 			
 		function playStream() {

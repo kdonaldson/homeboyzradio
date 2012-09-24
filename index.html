@@ -20,10 +20,7 @@
             	<h2 style="white-space: normal">Homeboyz Radio</h2>
                 <a href="#" onclick="toggleAudio(); return false;" data-icon="icon_radio" data-iconpos="notext" class="ui-btn-right" id="toggle" value="Turn music off">Listen</a>
             </div> <!-- /header -->
-				<div data-role="content" >
-				<button onClick="document.getElementById('video').play();document.getElementByID('video').volume=1;">Play</button>
-				<button onClick="document.getElementById('video').pause()">Pause</button>
-				<video id="video" src="http://icecast.ksl.com:8000/" width="0" height="0"></video>
+			<div data-role="content" >
             </div>
             <div data-role="footer" data-theme="a" data-position="fixed" class="nav-iOS-style-tab" data-id="hbr_footer">		
                 <div data-role="navbar" class="nav-iOS-style-tab">
@@ -770,8 +767,10 @@
 		
 		<!-- Cutstom -->
 		<script type="text/javascript" charset="utf-8" src="./assets/js/hbrappscript.js"></script> 
-
+		
+		<!-- Get Tweets -->	
 		<script type="text/javascript" src="http://twitter.com/status/user_timeline/HomeboyzRadio.json?count=30&callback=listTweets"</script>
-		<!-- Get Tweets -->		
+
+
   </body>
 </html>
