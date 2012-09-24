@@ -23,7 +23,7 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="icon.png" gap:role="default" width="156" height="156" />
+	<icon src="icon.png" />
 	
 	<!-- iOS icons for each specific screen type -->
 	<icon src="icons/ios/icon.png" width="57" height="57" />
